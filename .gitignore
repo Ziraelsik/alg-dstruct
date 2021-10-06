@@ -1,0 +1,13 @@
+/2-GubrienkoDenis-A19/**.vs/
+/2-GubrienkoDenis-A19/UnitTests/SourceA.c
+/2-GubrienkoDenis-A19/UnitTests/SourceA.h
+/2-GubrienkoDenis-A19/UnitTests/*.vcxproj*
+/2-GubrienkoDenis-A19/UnitTests/packages*
+/2-GubrienkoDenis-A19/UnitTests/pch*
+/2-GubrienkoDenis-A19/*.vcxproj*
+/2-GubrienkoDenis-A19/*.sln
+packages/
+**Debug/
+/Homework
+/Lab1
+/Lab2
