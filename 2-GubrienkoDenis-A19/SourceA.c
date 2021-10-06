@@ -117,18 +117,6 @@ void bubble_sort_list(list_t* list) {
 	}
 }
 
-void print_list(list_t* list) {
-	node_t* list_p = list->head;
-	while (list_p != NULL) {
-		printf("~%s \n", list_p->str);
-		list_p = list_p->next;
-	}
-	printf("\n");
-}
-
-int main(void) {
-	return 0;
-}
 
 
 
