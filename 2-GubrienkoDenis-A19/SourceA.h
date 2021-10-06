@@ -1,8 +1,14 @@
-typedef enum {
-	memory_error,
-	null_string,
-	null_list,
-}error_t;
+#include <stdio.h>
+#include <malloc.h>
+#include <stdlib.h>
+#include <string.h>
+#pragma warning(disable:4996)
+#pragma once
+
+enum error {
+	null_list = 1,
+};
+
 
 typedef struct node_t {
 	struct node_t* next;
@@ -17,7 +23,11 @@ typedef struct {
 list_t* create_list();
 
 node_t* create_node(char* str);
-void destroy_list(list_t* list);
-void add_element_list(node_t* node_s, char* str);
+
+node_t* push_element_list(list_t* list, char* str);
+
+int  destroy_list(list_t* list);
+
 void swap_str(node_t* a, node_t* b);
+
 void bubble_sort_list(list_t* list);
