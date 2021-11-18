@@ -10,8 +10,8 @@
  *
  * Vertecies amount: 30000
  *      Stress Test results:
- *      Memory: 2.1 GB
- *      DFS execution time: 27.044000 seconds
+ *      Memory: 2.2 GB
+ *      DFS execution time: 24.044000 seconds
  */
 
 typedef struct {
