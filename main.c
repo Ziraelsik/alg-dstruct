@@ -51,11 +51,19 @@ void print_vertex(int *result_list_vertex, int result_count) {
 void append_vertex(list_t *list, int i, int vertex) {
     if (list[i].list_nearby_vertex == NULL) {
         list[i].list_nearby_vertex = malloc(sizeof(int));
+        if (list[i].list_nearby_vertex == NULL) {
+            exit(1);
+        }
         list[i].list_nearby_vertex[0] = vertex;
         list[i].count_nearby_vertex++;
     } else {
         int count = list[i].count_nearby_vertex + 1;
-        list[i].list_nearby_vertex = realloc(list[i].list_nearby_vertex, sizeof(int) * count);
+        int *temp = NULL;
+        temp = (int *) realloc(list[i].list_nearby_vertex, sizeof(int) * count);
+        if (temp == NULL) {
+            exit(2);
+        }
+        list[i].list_nearby_vertex = temp;
         assert(list[i].list_nearby_vertex != NULL);
         list[i].list_nearby_vertex[count - 1] = vertex;
         list[i].count_nearby_vertex++;
